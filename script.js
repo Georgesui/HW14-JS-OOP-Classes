@@ -75,8 +75,9 @@ class TodoList {
 			if (!el) {
 				return;
 			}
+			let taskStatus = el.status ? 'status-done' : 'set-in-process';
 			lis +=
-				`<li data-id="${el.id}" class="${el.status ? 'status-done' : 'set-in-process'}">${el.value}
+				`<li data-id="${el.id}" class="${taskStatus}">${el.value}
 			<button class="set-status" data-action="set-status">Change status</button>
 			<button class="delete-task" data-action="delete-task">Delete</button>
 			<button class="move-up" data-action="move-up">Move Up</button>
